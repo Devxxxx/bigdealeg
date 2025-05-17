@@ -1,0 +1,31 @@
+{
+  "name": "bigdealegy",
+  "version": "1.0.0",
+  "description": "BigDealEgy Property Marketplace",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm run install:backend && npm run install:frontend",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm install",
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "engines": {
+    "node": ">=16.x"
+  },
+  "keywords": [
+    "property",
+    "real-estate",
+    "egypt"
+  ],
+  "author": "BigDealEgy Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

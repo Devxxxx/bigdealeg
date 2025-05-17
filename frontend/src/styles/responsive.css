@@ -1,0 +1,78 @@
+/* Additional global styles for responsive design */
+
+
+/* Theme colors for consistent use throughout the app */
+:root {
+  --color-primary-50: theme('colors.primary.50');
+  --color-primary-100: theme('colors.primary.100');
+  --color-primary-200: theme('colors.primary.200');
+  --color-primary-300: theme('colors.primary.300');
+  --color-primary-400: theme('colors.primary.400');
+  --color-primary-500: theme('colors.primary.500');
+  --color-primary-600: theme('colors.primary.600');
+  --color-primary-700: theme('colors.primary.700');
+  --color-primary-800: theme('colors.primary.800');
+  --color-primary-900: theme('colors.primary.900');
+}
+
+/* Gradient text utility */
+.text-gradient-primary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-700;
+}
+
+.text-gradient-secondary {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary-500 to-secondary-700;
+}
+
+/* Background patterns */
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Enhanced focus rings for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Transition utilities */
+.transition-standard {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Shadow variants */
+.shadow-elevated {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Mobile viewport fix for iOS safari */
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height:auto;
+  }
+}
+
+/* Media query for dark mode preference */
+@media (prefers-color-scheme: dark) {
+  .auto-dark-mode {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+/* Mobile navigation enhancements */
+@media (max-width: 768px) {
+  .mobile-menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+}
